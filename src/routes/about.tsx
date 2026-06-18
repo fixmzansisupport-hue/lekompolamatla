@@ -32,13 +32,16 @@ function About() {
 
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              <span className="text-foreground">Man Driller</span> is the founder and curator behind <span className="text-foreground">Lekompo La Matla</span> — a streetwear and sound brand born out of the heat and rhythm of the Lekompo movement.
+              <span className="text-foreground">Lekompo La Matla</span> is the dream of one young man from the township — <span className="text-foreground">Man Driller</span>. Growing up surrounded by the noise, the dancers and the log drums of the Lekompo movement, he saw a culture exploding from the streets that nobody was dressing properly. So he picked up the work himself.
             </p>
             <p>
-              Every tee, every hoodie, every drum pack on this store is hand-picked or produced by Driller himself. No filler. No shortcuts. Just power — <em>matla</em> — straight from the township to your speakers and your wardrobe.
+              He started small. Hand-printing the first run of tees from home, packing each order himself, taking taxis across Joburg to deliver hoodies one by one. No investors, no shortcuts — just long nights, a sketchpad, and the belief that the culture deserved a flag of its own.
             </p>
             <p>
-              Whether you're a dancer chasing the next viral move, a DJ stocking up on log drums, or just somebody who wants to wear the culture loud — this is your spot.
+              Today, Lekompo La Matla is a movement. From the white and cyan signature hoodies, to the reflective Lageshu two-piece sets that glow on the dancefloor, to the artwork tees that tell our story in every stitch — every single piece is curated, approved and worn by Man Driller himself.
+            </p>
+            <p>
+              This brand is for the dancers, the DJs, the hustlers and the dreamers. <em>Matla</em> means power. And power is what we wear. 💪
             </p>
           </div>
 

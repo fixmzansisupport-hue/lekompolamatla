@@ -41,7 +41,7 @@ function Cart() {
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
                     <div className="truncate font-display text-base uppercase tracking-wide">{product.name}</div>
-                    <div className="mt-0.5 text-[11px] uppercase tracking-widest text-muted-foreground">{product.category === "digital" ? "Digital" : "Streetwear"}</div>
+                    <div className="mt-0.5 text-[11px] uppercase tracking-widest text-muted-foreground">Streetwear</div>
                   </div>
                   <button onClick={() => remove(product.id)} className="text-muted-foreground hover:text-primary" aria-label="Remove">
                     <Trash2 className="h-4 w-4" />

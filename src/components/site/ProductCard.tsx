@@ -19,7 +19,7 @@ export function ProductCard({ product }: { product: Product }) {
               <span className="rounded-full bg-accent px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-accent-foreground">New</span>
             )}
             <span className="rounded-full bg-background/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest backdrop-blur">
-              {product.category === "digital" ? "Digital" : "Streetwear"}
+              Streetwear
             </span>
           </div>
         </div>
