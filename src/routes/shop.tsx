@@ -16,8 +16,15 @@ export const Route = createFileRoute("/shop")({
 });
 
 function Shop() {
-  const [cat, setCat] = useState<"all" | "streetwear" | "digital">("all");
-  const items = PRODUCTS.filter((p) => cat === "all" || p.category === cat);
+  const [cat, setCat] = useState<"all" | "hoodies" | "reflective" | "tees" | "raincoats">("all");
+  const groups: Record<typeof cat, (id: string) => boolean> = {
+    all: () => true,
+    hoodies: (id) => id.startsWith("hoodie-"),
+    reflective: (id) => id.startsWith("reflective-"),
+    tees: (id) => id.startsWith("tee-"),
+    raincoats: (id) => id.startsWith("raincoat-"),
+  };
+  const items = PRODUCTS.filter((p) => groups[cat](p.id));
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 md:px-8">
@@ -27,8 +34,10 @@ function Shop() {
       <div className="mt-6 flex flex-wrap gap-2">
         {([
           ["all", "All"],
-          ["streetwear", "Streetwear"],
-          ["digital", "Digital Goods"],
+          ["hoodies", "Hoodies"],
+          ["reflective", "Reflective"],
+          ["tees", "T-Shirts"],
+          ["raincoats", "Rain Coats"],
         ] as const).map(([k, label]) => (
           <button
             key={k}
