@@ -86,6 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Lekompo La Matla — Curated by Man Driller" },
       { property: "og:description", content: "Bold streetwear, beats and sound packs from the heart of Lekompo culture. Curated by Man Driller." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://lekompolamatla.com" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lekompo La Matla — Curated by Man Driller" },
