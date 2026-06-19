@@ -19,8 +19,12 @@ export type Product = {
   category: "streetwear";
   description: string;
   image: string;
+  isNew?: boolean;
+  featured?: boolean;
   pairGroup?: string;
   pairIndex?: number;
+};
+
 
 
 export const PRODUCTS: Product[] = [
