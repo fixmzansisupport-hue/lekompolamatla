@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PRODUCTS } from "@/lib/products";
 import { ProductCard } from "@/components/site/ProductCard";
+import { PairedProductCard } from "@/components/site/PairedProductCard";
 
 export const Route = createFileRoute("/shop")({
   head: () => ({
@@ -16,15 +17,17 @@ export const Route = createFileRoute("/shop")({
 });
 
 function Shop() {
-  const [cat, setCat] = useState<"all" | "hoodies" | "reflective" | "tees" | "raincoats">("all");
+  const [cat, setCat] = useState<"all" | "hoodies" | "reflective" | "tees" | "raincoats" | "umbrella">("all");
   const groups: Record<typeof cat, (id: string) => boolean> = {
     all: () => true,
     hoodies: (id) => id.startsWith("hoodie-"),
     reflective: (id) => id.startsWith("reflective-"),
-    tees: (id) => id.startsWith("tee-"),
+    tees: (id) => id.startsWith("tee-") && !id.includes("umbrella"),
     raincoats: (id) => id.startsWith("raincoat-"),
+    umbrella: (id) => id.includes("umbrella"),
   };
   const items = PRODUCTS.filter((p) => groups[cat](p.id));
+  const renderedPairs = new Set<string>();
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 md:px-8">
@@ -38,6 +41,7 @@ function Shop() {
           ["reflective", "Reflective"],
           ["tees", "T-Shirts"],
           ["raincoats", "Rain Coats"],
+          ["umbrella", "Umbrella Tees"],
         ] as const).map(([k, label]) => (
           <button
             key={k}
@@ -54,7 +58,17 @@ function Shop() {
       </div>
 
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
-        {items.map((p) => <ProductCard key={p.id} product={p} />)}
+        {items.map((p) => {
+          if (p.pairGroup) {
+            if (renderedPairs.has(p.pairGroup)) return null;
+            renderedPairs.add(p.pairGroup);
+            const pairItems = items
+              .filter((x) => x.pairGroup === p.pairGroup)
+              .sort((a, b) => (a.pairIndex ?? 0) - (b.pairIndex ?? 0));
+            return <PairedProductCard key={p.pairGroup} products={pairItems} />;
+          }
+          return <ProductCard key={p.id} product={p} />;
+        })}
       </div>
     </div>
   );
