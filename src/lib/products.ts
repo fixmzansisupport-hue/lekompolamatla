@@ -19,9 +19,9 @@ export type Product = {
   category: "streetwear";
   description: string;
   image: string;
-  isNew?: boolean;
-  featured?: boolean;
-};
+  pairGroup?: string;
+  pairIndex?: number;
+
 
 export const PRODUCTS: Product[] = [
   { id: "hoodie-white", name: "Lekompo Hoodie — White", price: 500, category: "streetwear", description: "Signature Lekompo La Matla hoodie. Heavyweight fleece, bold front print. Wear the culture.", image: hoodieWhite.url, featured: true, isNew: true },
