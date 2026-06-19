@@ -21,7 +21,11 @@ export type Product = {
   image: string;
   isNew?: boolean;
   featured?: boolean;
+  pairGroup?: string;
+  pairIndex?: number;
 };
+
+
 
 export const PRODUCTS: Product[] = [
   { id: "hoodie-white", name: "Lekompo Hoodie — White", price: 500, category: "streetwear", description: "Signature Lekompo La Matla hoodie. Heavyweight fleece, bold front print. Wear the culture.", image: hoodieWhite.url, featured: true, isNew: true },
@@ -33,10 +37,10 @@ export const PRODUCTS: Product[] = [
   { id: "tee-navy-couple", name: "Lekompo Artwork T-Shirt — Navy Couple", price: 400, category: "streetwear", description: "Premium oversized navy tee with the Lekompo couple artwork. A street staple.", image: teeNavyCouple.url },
   { id: "raincoat-black", name: "Lekompo Rain Coat — Black", price: 1000, category: "streetwear", description: "Waterproof Lekompo poncho rain coat in black with reflective branding. Comes with carry pouch.", image: raincoatBlack.url },
   { id: "raincoat-white", name: "Lekompo Rain Coat — White", price: 1000, category: "streetwear", description: "Waterproof Lekompo poncho rain coat in white with reflective branding. Comes with carry pouch.", image: raincoatWhite.url },
-  { id: "tee-umbrella-white", name: "Lekompo T-Shirt — Umbrella White", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in white with the signature umbrella couple artwork. Man Driller edition.", image: teeWhiteUmbrella.url, isNew: true, featured: true },
-  { id: "tee-umbrella-pink", name: "Lekompo T-Shirt — Umbrella Pink", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in soft pink with the signature umbrella couple artwork.", image: teePinkUmbrella.url, isNew: true },
-  { id: "tee-umbrella-lime", name: "Lekompo T-Shirt — Umbrella Lime", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in neon lime with the signature umbrella couple artwork.", image: teeLimeUmbrella.url, isNew: true },
-  { id: "tee-umbrella-blue", name: "Lekompo T-Shirt — Umbrella Blue", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in sky blue with the signature umbrella couple artwork.", image: teeBlueUmbrella.url, isNew: true },
+  { id: "tee-umbrella-white", name: "Lekompo T-Shirt — Umbrella White", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in white with the signature umbrella couple artwork. Man Driller edition.", image: teeWhiteUmbrella.url, isNew: true, featured: true, pairGroup: "umbrella-1", pairIndex: 0 },
+  { id: "tee-umbrella-blue", name: "Lekompo T-Shirt — Umbrella Blue", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in sky blue with the signature umbrella couple artwork.", image: teeBlueUmbrella.url, isNew: true, pairGroup: "umbrella-1", pairIndex: 1 },
+  { id: "tee-umbrella-pink", name: "Lekompo T-Shirt — Umbrella Pink", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in soft pink with the signature umbrella couple artwork.", image: teePinkUmbrella.url, isNew: true, pairGroup: "umbrella-2", pairIndex: 0 },
+  { id: "tee-umbrella-lime", name: "Lekompo T-Shirt — Umbrella Lime", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in neon lime with the signature umbrella couple artwork.", image: teeLimeUmbrella.url, isNew: true, pairGroup: "umbrella-2", pairIndex: 1 },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);

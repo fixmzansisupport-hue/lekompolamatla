@@ -2,6 +2,7 @@ import shoeLaunch from "@/assets/shoe-launch.jpg.asset.json";
 import { createFileRoute } from "@tanstack/react-router";
 import { PRODUCTS } from "@/lib/products";
 import { ProductCard } from "@/components/site/ProductCard";
+import { PairedProductCard } from "@/components/site/PairedProductCard";
 
 export const Route = createFileRoute("/new")({
   head: () => ({
@@ -17,6 +18,8 @@ export const Route = createFileRoute("/new")({
 
 function NewArrivals() {
   const items = PRODUCTS.filter((p) => p.isNew);
+  const renderedPairs = new Set<string>();
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 md:px-8">
       <div className="mb-10 overflow-hidden rounded-2xl border border-border">
@@ -30,7 +33,17 @@ function NewArrivals() {
       <h1 className="font-display mt-2 text-4xl uppercase tracking-wide sm:text-5xl">New Arrivals</h1>
       <p className="mt-3 max-w-xl text-sm text-muted-foreground">Fresh from the workshop and the studio. Limited stock — when it's gone, it's gone.</p>
       <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
-        {items.map((p) => <ProductCard key={p.id} product={p} />)}
+        {items.map((p) => {
+          if (p.pairGroup) {
+            if (renderedPairs.has(p.pairGroup)) return null;
+            renderedPairs.add(p.pairGroup);
+            const pairItems = items
+              .filter((x) => x.pairGroup === p.pairGroup)
+              .sort((a, b) => (a.pairIndex ?? 0) - (b.pairIndex ?? 0));
+            return <PairedProductCard key={p.pairGroup} products={pairItems} />;
+          }
+          return <ProductCard key={p.id} product={p} />;
+        })}
       </div>
     </div>
   );
