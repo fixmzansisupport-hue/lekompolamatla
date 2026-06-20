@@ -8,9 +8,9 @@ export const Route = createFileRoute("/new")({
   head: () => ({
     meta: [
       { title: "New Arrivals — Lekompo La Matla" },
-      { name: "description", content: "The freshest drops from Man Driller. Limited stock — when it's gone, it's gone." },
+      { name: "description", content: "The freshest Lekompo La Matla drops. Limited stock — when it's gone, it's gone." },
       { property: "og:title", content: "New Arrivals — Lekompo La Matla" },
-      { property: "og:description", content: "The freshest drops from Man Driller." },
+      { property: "og:description", content: "The freshest drops from Lekompo La Matla." },
     ],
   }),
   component: NewArrivals,

@@ -11,7 +11,7 @@ export function Footer() {
             <div className="font-display text-xl uppercase tracking-wider">Lekompo La Matla</div>
           </div>
           <p className="mt-4 max-w-md text-sm text-muted-foreground">
-            The official streetwear & sound store curated by <span className="font-semibold text-foreground">Man Driller</span>. Power, culture, matla — straight from the township to your speakers.
+            The official streetwear store founded by <span className="font-semibold text-foreground">Man Driller</span>. Power, culture, matla — straight from the township to the streets.
           </p>
         </div>
         <div>

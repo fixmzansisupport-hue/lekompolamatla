@@ -8,9 +8,9 @@ export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
       { title: "Shop — Lekompo La Matla" },
-      { name: "description", content: "Streetwear and digital sound packs curated by Man Driller." },
+      { name: "description", content: "Streetwear from Lekompo La Matla, founded by Man Driller." },
       { property: "og:title", content: "Shop — Lekompo La Matla" },
-      { property: "og:description", content: "Streetwear and digital sound packs curated by Man Driller." },
+      { property: "og:description", content: "Streetwear from Lekompo La Matla, founded by Man Driller." },
     ],
   }),
   component: Shop,

@@ -6,9 +6,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Man Driller — Lekompo La Matla" },
-      { name: "description", content: "Man Driller is the curator and founder of Lekompo La Matla. DJ, tastemaker, and ambassador for Lekompo culture." },
+      { name: "description", content: "Man Driller is the founder of Lekompo La Matla — the streetwear brand built from the heart of Lekompo culture." },
       { property: "og:title", content: "About Man Driller" },
-      { property: "og:description", content: "Curator and founder of Lekompo La Matla." },
+      { property: "og:description", content: "Founder of Lekompo La Matla." },
       { property: "og:image", content: driller.url },
     ],
   }),
@@ -28,7 +28,7 @@ function About() {
         <div className="md:col-span-3">
           <div className="text-xs font-bold uppercase tracking-[0.3em] text-accent">About</div>
           <h1 className="font-display mt-2 text-4xl uppercase tracking-wide sm:text-5xl md:text-6xl">Man Driller</h1>
-          <div className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">Founder · Curator · DJ</div>
+          <div className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">Founder</div>
 
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
@@ -38,17 +38,17 @@ function About() {
               He started small. Hand-printing the first run of tees from home, packing each order himself, taking taxis across Joburg to deliver hoodies one by one. No investors, no shortcuts — just long nights, a sketchpad, and the belief that the culture deserved a flag of its own.
             </p>
             <p>
-              Today, Lekompo La Matla is a movement. From the white and cyan signature hoodies, to the reflective Lageshu two-piece sets that glow on the dancefloor, to the artwork tees that tell our story in every stitch — every single piece is curated, approved and worn by Man Driller himself.
+              Today, Lekompo La Matla is a movement. From the white and cyan signature hoodies, to the reflective Lageshu two-piece sets, to the artwork tees that tell our story in every stitch — every single piece is approved and worn by Man Driller himself.
             </p>
             <p>
-              This brand is for the dancers, the DJs, the hustlers and the dreamers. <em>Matla</em> means power. And power is what we wear. 💪
+              This brand is for the dancers, the hustlers and the dreamers. <em>Matla</em> means power. And power is what we wear. 💪
             </p>
           </div>
 
           <div className="mt-8 grid grid-cols-3 gap-3">
             {[
-              ["100+", "Shows played"],
-              ["50+", "Tracks released"],
+              ["10+", "Drops released"],
+              ["1000+", "Pieces shipped"],
               ["1", "Movement"],
             ].map(([num, label]) => (
               <div key={label} className="rounded-2xl border border-border bg-card p-4">
@@ -60,7 +60,7 @@ function About() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/contact" className="inline-flex items-center rounded-full bg-primary px-6 py-3 font-display text-sm uppercase tracking-widest text-primary-foreground shadow-[var(--shadow-blood)]">
-              Book Man Driller
+              Contact Man Driller
             </Link>
             <Link to="/shop" className="inline-flex items-center rounded-full border border-border bg-secondary/40 px-6 py-3 font-display text-sm uppercase tracking-widest">
               Shop the Store
