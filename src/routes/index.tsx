@@ -33,9 +33,9 @@ function Index() {
               <Flame className="h-3.5 w-3.5" /> New Drop Live
             </div>
             <h1 className="font-display mt-5 text-5xl uppercase leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
-              Power. Culture.
+              Lekompo La Matla.
               <br />
-              <span className="text-primary">Matla.</span>
+              <span className="text-primary">Streetwear.</span>
             </h1>
             <p className="mt-5 max-w-lg text-base text-muted-foreground sm:text-lg">
               Lekompo La Matla is the official streetwear store founded by{" "}
