@@ -8,23 +8,28 @@ export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
       { title: "Shop — Lekompo La Matla" },
-      { name: "description", content: "Streetwear and digital sound packs curated by Man Driller." },
+      { name: "description", content: "Streetwear from Lekompo La Matla, founded by Man Driller." },
       { property: "og:title", content: "Shop — Lekompo La Matla" },
-      { property: "og:description", content: "Streetwear and digital sound packs curated by Man Driller." },
+      { property: "og:description", content: "Streetwear from Lekompo La Matla, founded by Man Driller." },
     ],
   }),
   component: Shop,
 });
 
 function Shop() {
-  const [cat, setCat] = useState<"all" | "hoodies" | "reflective" | "tees" | "raincoats" | "umbrella">("all");
+  const [cat, setCat] = useState<"all" | "hoodies" | "tracksuits" | "reflective" | "tees" | "umbrella" | "beanies" | "raincoats" | "tights" | "backpacks" | "gloves">("all");
   const groups: Record<typeof cat, (id: string) => boolean> = {
     all: () => true,
     hoodies: (id) => id.startsWith("hoodie-"),
+    tracksuits: (id) => id.startsWith("tracksuit-"),
     reflective: (id) => id.startsWith("reflective-"),
     tees: (id) => id.startsWith("tee-") && !id.includes("umbrella"),
-    raincoats: (id) => id.startsWith("raincoat-"),
     umbrella: (id) => id.includes("umbrella"),
+    beanies: (id) => id.startsWith("beanie-"),
+    raincoats: (id) => id.startsWith("raincoat-"),
+    tights: (id) => id.startsWith("ladies-tights"),
+    backpacks: (id) => id.startsWith("backpack-"),
+    gloves: (id) => id === "gloves",
   };
   const items = PRODUCTS.filter((p) => groups[cat](p.id));
   const renderedPairs = new Set<string>();
@@ -38,10 +43,15 @@ function Shop() {
         {([
           ["all", "All"],
           ["hoodies", "Hoodies"],
+          ["tracksuits", "Tracksuits"],
           ["reflective", "Reflective"],
           ["tees", "T-Shirts"],
-          ["raincoats", "Rain Coats"],
           ["umbrella", "Umbrella Tees"],
+          ["beanies", "Beanies"],
+          ["raincoats", "Rain Coats"],
+          ["tights", "Ladies Tights"],
+          ["backpacks", "Backpacks"],
+          ["gloves", "Gloves"],
         ] as const).map(([k, label]) => (
           <button
             key={k}

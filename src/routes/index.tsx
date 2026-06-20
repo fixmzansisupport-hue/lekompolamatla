@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Play, Flame, ArrowRight } from "lucide-react";
+import { Flame, ArrowRight } from "lucide-react";
 import logo from "@/assets/logo.png.asset.json";
 import driller from "@/assets/driller.jpg.asset.json";
 import { PRODUCTS } from "@/lib/products";
@@ -8,10 +8,10 @@ import { ProductCard } from "@/components/site/ProductCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lekompo La Matla — Streetwear & Beats by Man Driller" },
-      { name: "description", content: "Featured drops, signature streetwear and Lekompo sound packs. Curated by Man Driller." },
+      { title: "Lekompo La Matla — Streetwear by Man Driller" },
+      { name: "description", content: "Featured drops and signature streetwear from Lekompo La Matla. Founded by Man Driller." },
       { property: "og:title", content: "Lekompo La Matla" },
-      { property: "og:description", content: "Streetwear, beats & matla — curated by Man Driller." },
+      { property: "og:description", content: "Streetwear & matla — founded by Man Driller." },
     ],
   }),
   component: Index,
@@ -38,8 +38,8 @@ function Index() {
               <span className="text-primary">Matla.</span>
             </h1>
             <p className="mt-5 max-w-lg text-base text-muted-foreground sm:text-lg">
-              Lekompo La Matla is the official streetwear & sound store curated by{" "}
-              <span className="font-semibold text-foreground">Man Driller</span>. Built for the dancers, the DJs, the streets.
+              Lekompo La Matla is the official streetwear store founded by{" "}
+              <span className="font-semibold text-foreground">Man Driller</span>. Built for the dancers, the hustlers, the streets.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
@@ -63,7 +63,7 @@ function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
                 <div className="font-display text-2xl uppercase tracking-wide">Man Driller</div>
-                <div className="text-xs uppercase tracking-[0.3em] text-accent">Founder · Curator · DJ</div>
+                <div className="text-xs uppercase tracking-[0.3em] text-accent">Founder</div>
               </div>
               <img src={logo.url} alt="" className="absolute right-4 top-4 h-14 w-14 rounded-full ring-2 ring-accent/60" />
             </div>
@@ -87,36 +87,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Trending Beats */}
-      <section className="border-y border-border bg-card/40">
-        <div className="mx-auto max-w-7xl px-4 py-16 md:px-8">
-          <div className="text-xs font-bold uppercase tracking-[0.3em] text-accent">Sound</div>
-          <h2 className="font-display mt-2 text-3xl uppercase tracking-wide sm:text-4xl">Trending Beats</h2>
-          <p className="mt-2 max-w-xl text-sm text-muted-foreground">Previews of Man Driller's latest Lekompo cuts. Full packs available in the digital shop.</p>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[
-              { title: "Matla Riddim", length: "3:42", tag: "Lekompo" },
-              { title: "Township Drill", length: "2:58", tag: "Beat Pack" },
-              { title: "Log Drum Anthem", length: "4:11", tag: "Single" },
-            ].map((t) => (
-              <div key={t.title} className="group flex items-center gap-4 rounded-2xl border border-border bg-background p-4 transition hover:border-primary">
-                <button className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground transition group-hover:scale-105">
-                  <Play className="h-6 w-6 fill-current" />
-                </button>
-                <div className="min-w-0 flex-1">
-                  <div className="truncate font-display text-lg uppercase tracking-wide">{t.title}</div>
-                  <div className="text-xs uppercase tracking-widest text-muted-foreground">{t.tag} · {t.length}</div>
-                  <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-secondary">
-                    <div className="h-full w-1/3 bg-gradient-to-r from-primary to-accent" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Categories */}
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8">
         <div className="grid gap-4 md:grid-cols-2 md:gap-6">
@@ -126,11 +96,11 @@ function Index() {
             <p className="mt-3 max-w-xs text-sm text-muted-foreground">Tees, hoodies, hats and cargos. Built for the dancefloor.</p>
             <div className="mt-6 inline-flex items-center gap-2 font-semibold">Shop apparel <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></div>
           </Link>
-          <Link to="/shop" className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-accent/30 to-background p-8 md:p-12">
-            <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Sound</div>
-            <div className="font-display mt-2 text-4xl uppercase tracking-wide md:text-5xl">Digital Goods</div>
-            <p className="mt-3 max-w-xs text-sm text-muted-foreground">Drum packs, presets, vocal chops & loop kits.</p>
-            <div className="mt-6 inline-flex items-center gap-2 font-semibold">Shop sound <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></div>
+          <Link to="/new" className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-accent/30 to-background p-8 md:p-12">
+            <div className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Fresh</div>
+            <div className="font-display mt-2 text-4xl uppercase tracking-wide md:text-5xl">New Arrivals</div>
+            <p className="mt-3 max-w-xs text-sm text-muted-foreground">Beanies, tracksuits, backpacks, gloves and more — just dropped.</p>
+            <div className="mt-6 inline-flex items-center gap-2 font-semibold">Shop new <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></div>
           </Link>
         </div>
       </section>

@@ -6,10 +6,10 @@ import { whatsappBookingUrl, WHATSAPP_NUMBER } from "@/lib/cart";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Bookings — Lekompo La Matla" },
-      { name: "description", content: "Book Man Driller for your event or send us an order inquiry." },
-      { property: "og:title", content: "Contact & Bookings — Lekompo La Matla" },
-      { property: "og:description", content: "Book Man Driller for your event." },
+      { title: "Contact & Orders — Lekompo La Matla" },
+      { name: "description", content: "Send Man Driller an order inquiry or general question via WhatsApp." },
+      { property: "og:title", content: "Contact & Orders — Lekompo La Matla" },
+      { property: "og:description", content: "Reach Man Driller directly on WhatsApp." },
     ],
   }),
   component: Contact,
@@ -29,9 +29,9 @@ function Contact() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 md:px-8 md:py-20">
       <div className="text-xs font-bold uppercase tracking-[0.3em] text-accent">Contact</div>
-      <h1 className="font-display mt-2 text-4xl uppercase tracking-wide sm:text-5xl">Bookings & Inquiries</h1>
+      <h1 className="font-display mt-2 text-4xl uppercase tracking-wide sm:text-5xl">Orders & Inquiries</h1>
       <p className="mt-3 max-w-xl text-sm text-muted-foreground">
-        Want to book Man Driller for your event, or chat about an order? Drop your details below — your message will be drafted and sent straight to WhatsApp.
+        Want to place an order or ask a question? Drop your details below — your message will be drafted and sent straight to WhatsApp.
       </p>
 
       <div className="mt-10 grid gap-8 md:grid-cols-3">
@@ -40,10 +40,10 @@ function Contact() {
             <Field label="Your name" required>
               <input value={form.name} onChange={onChange("name")} required maxLength={80} className={inputCls} />
             </Field>
-            <Field label="Event type">
-              <input value={form.event} onChange={onChange("event")} placeholder="Club night, festival…" maxLength={80} className={inputCls} />
+            <Field label="Inquiry type">
+              <input value={form.event} onChange={onChange("event")} placeholder="Order, sizing, delivery…" maxLength={80} className={inputCls} />
             </Field>
-            <Field label="Date">
+            <Field label="Preferred date">
               <input value={form.date} onChange={onChange("date")} type="date" className={inputCls} />
             </Field>
             <Field label="Location">

@@ -11,6 +11,14 @@ import teeWhiteUmbrella from "@/assets/tee-white-umbrella.jpg.asset.json";
 import teePinkUmbrella from "@/assets/tee-pink-umbrella.jpg.asset.json";
 import teeLimeUmbrella from "@/assets/tee-lime-umbrella.jpg.asset.json";
 import teeBlueUmbrella from "@/assets/tee-blue-umbrella.jpg.asset.json";
+import beanieLime from "@/assets/beanie-lime.jpg.asset.json";
+import beaniePurple from "@/assets/beanie-purple.jpg.asset.json";
+import beanieYellow from "@/assets/beanie-yellow.jpg.asset.json";
+import ladiesTights from "@/assets/ladies-tights.png.asset.json";
+import tracksuitsColors from "@/assets/tracksuits-colors.png.asset.json";
+import tracksuitBlack from "@/assets/tracksuit-black.png.asset.json";
+import backpacks from "@/assets/backpacks.png.asset.json";
+import gloves from "@/assets/gloves.png.asset.json";
 
 export type Product = {
   id: string;
@@ -33,14 +41,23 @@ export const PRODUCTS: Product[] = [
   { id: "reflective-rainbow", name: "Lekompo Reflective 2 Piece — Rainbow", price: 1500, category: "streetwear", description: "Lageshu reflective jacket and pants set. Glow in the dark. Limited stock.", image: reflRainbow.url, featured: true, isNew: true },
   { id: "reflective-silver", name: "Lekompo Reflective 2 Piece — Silver", price: 1500, category: "streetwear", description: "Lageshu reflective jacket and shorts set. Holographic finish, glow in the dark. Limited stock.", image: reflSilver.url, isNew: true },
   { id: "tee-white-couple", name: "Lekompo Artwork T-Shirt — White Couple", price: 400, category: "streetwear", description: "Premium oversized tee with the Lekompo couple artwork print. Soft heavyweight cotton.", image: teeWhiteCouple.url, featured: true },
-  { id: "tee-navy-crew", name: "Lekompo Artwork T-Shirt — Navy Crew", price: 400, category: "streetwear", description: "Premium oversized navy tee featuring the Lekompo crew artwork — a Man Driller signature.", image: teeNavyCrew.url },
+  { id: "tee-navy-crew", name: "Lekompo Artwork T-Shirt — Navy Crew", price: 400, category: "streetwear", description: "Premium oversized navy tee featuring the Lekompo crew artwork — a signature Lekompo La Matla piece.", image: teeNavyCrew.url },
   { id: "tee-navy-couple", name: "Lekompo Artwork T-Shirt — Navy Couple", price: 400, category: "streetwear", description: "Premium oversized navy tee with the Lekompo couple artwork. A street staple.", image: teeNavyCouple.url },
   { id: "raincoat-black", name: "Lekompo Rain Coat — Black", price: 1000, category: "streetwear", description: "Waterproof Lekompo poncho rain coat in black with reflective branding. Comes with carry pouch.", image: raincoatBlack.url },
   { id: "raincoat-white", name: "Lekompo Rain Coat — White", price: 1000, category: "streetwear", description: "Waterproof Lekompo poncho rain coat in white with reflective branding. Comes with carry pouch.", image: raincoatWhite.url },
-  { id: "tee-umbrella-white", name: "Lekompo T-Shirt — Umbrella White", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in white with the signature umbrella couple artwork. Man Driller edition.", image: teeWhiteUmbrella.url, isNew: true, featured: true, pairGroup: "umbrella-1", pairIndex: 0 },
+  { id: "tee-umbrella-white", name: "Lekompo T-Shirt — Umbrella White", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in white with the signature umbrella couple artwork.", image: teeWhiteUmbrella.url, isNew: true, featured: true, pairGroup: "umbrella-1", pairIndex: 0 },
   { id: "tee-umbrella-blue", name: "Lekompo T-Shirt — Umbrella Blue", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in sky blue with the signature umbrella couple artwork.", image: teeBlueUmbrella.url, isNew: true, pairGroup: "umbrella-1", pairIndex: 1 },
   { id: "tee-umbrella-pink", name: "Lekompo T-Shirt — Umbrella Pink", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in soft pink with the signature umbrella couple artwork.", image: teePinkUmbrella.url, isNew: true, pairGroup: "umbrella-2", pairIndex: 0 },
   { id: "tee-umbrella-lime", name: "Lekompo T-Shirt — Umbrella Lime", price: 400, category: "streetwear", description: "Lekompo La Matla oversized tee in neon lime with the signature umbrella couple artwork.", image: teeLimeUmbrella.url, isNew: true, pairGroup: "umbrella-2", pairIndex: 1 },
+  { id: "beanie-lime", name: "Lekompo Beanie — Lime", price: 100, category: "streetwear", description: "Lekompo La Matla beanie in neon lime with the signature peace-hand artwork and embroidered logo on the cuff.", image: beanieLime.url, isNew: true, featured: true, pairGroup: "beanies", pairIndex: 0 },
+  { id: "beanie-purple", name: "Lekompo Beanie — Purple", price: 100, category: "streetwear", description: "Lekompo La Matla beanie in lavender purple with the signature peace-hand artwork and embroidered logo.", image: beaniePurple.url, isNew: true, pairGroup: "beanies", pairIndex: 1 },
+  { id: "beanie-yellow", name: "Lekompo Beanie — Yellow", price: 100, category: "streetwear", description: "Lekompo La Matla beanie in bright yellow with the signature peace-hand artwork and embroidered logo.", image: beanieYellow.url, isNew: true, pairGroup: "beanies", pairIndex: 2 },
+  { id: "ladies-tights", name: "Lekompo Ladies Tights Set", price: 250, category: "streetwear", description: "Lekompo Lageshu ladies two-piece tights set — crop top and tights with the signature peace-hand and logo print. Available in blue, orange, black, teal and pink.", image: ladiesTights.url, isNew: true, featured: true },
+  { id: "tracksuit-colors", name: "Lekompo Tracksuit — Colour Range", price: 900, category: "streetwear", description: "Premium Lekompo tracksuit — heavyweight hoodie and joggers with bold front print and leg branding. Available in navy, green and burnt orange.", image: tracksuitsColors.url, isNew: true, featured: true },
+  { id: "tracksuit-black", name: "Lekompo Winter Special Tracksuit — Black", price: 900, category: "streetwear", description: "Black Lekompo La Matla full set: hoodie + joggers with cyan print. Winter special — comes with a free beanie.", image: tracksuitBlack.url, isNew: true },
+  { id: "backpack-small", name: "Lekompo Backpack — Small", price: 350, category: "streetwear", description: "Lekompo Lageshu school backpack (small). Premium quality, designed for comfort and everyday style. Available in multiple colours.", image: backpacks.url, isNew: true, featured: true },
+  { id: "backpack-large", name: "Lekompo Backpack — Large", price: 450, category: "streetwear", description: "Lekompo Lageshu school backpack (large). Premium quality, designed for comfort, strength and everyday style. Available in multiple colours.", image: backpacks.url, isNew: true },
+  { id: "gloves", name: "Lekompo Reflector Gloves", price: 150, category: "streetwear", description: "Lekompo Lageshu reflector gloves with the signature logo print. Available in 9 colours: purple, blue, white, pink, yellow, red, beige, green and black.", image: gloves.url, isNew: true, featured: true },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);

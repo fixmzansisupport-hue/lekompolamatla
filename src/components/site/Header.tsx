@@ -22,7 +22,7 @@ export function Header() {
           <img src={logo.url} alt="Lekompo La Matla" className="h-11 w-11 shrink-0 rounded-full ring-2 ring-primary/60" />
           <div className="min-w-0 leading-none">
             <div className="font-display truncate text-lg uppercase tracking-wider sm:text-xl">Lekompo La Matla</div>
-            <div className="mt-0.5 truncate text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Curated by Man Driller</div>
+            <div className="mt-0.5 truncate text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Founded by Man Driller</div>
           </div>
         </Link>
 
