@@ -1,12 +1,12 @@
-import { Link } from "@tanstack/react-router";
 import type { Product } from "@/lib/products";
 import { useCart } from "@/lib/cart";
+import { ImageLightbox } from "./ImageLightbox";
 
 export function ProductCard({ product }: { product: Product }) {
   const { add } = useCart();
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary hover:shadow-[var(--shadow-blood)]">
-      <Link to="/shop" className="block">
+      <ImageLightbox src={product.image} alt={product.name}>
         <div className="relative aspect-square overflow-hidden bg-secondary">
           <img
             src={product.image}
@@ -23,7 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
             </span>
           </div>
         </div>
-      </Link>
+      </ImageLightbox>
       <div className="flex items-start justify-between gap-3 p-4">
         <div className="min-w-0">
           <div className="truncate font-display text-base uppercase tracking-wide">{product.name}</div>
