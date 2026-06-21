@@ -19,6 +19,16 @@ import tracksuitsColors from "@/assets/tracksuits-colors.png.asset.json";
 import tracksuitBlack from "@/assets/tracksuit-black.png.asset.json";
 import backpacks from "@/assets/backpacks.png.asset.json";
 import gloves from "@/assets/gloves.png.asset.json";
+import capBlack from "@/assets/cap-black.jpg.asset.json";
+import capLightblue from "@/assets/cap-lightblue.jpg.asset.json";
+import capBlue from "@/assets/cap-blue.jpg.asset.json";
+import capPurple from "@/assets/cap-purple.jpg.asset.json";
+import capYellow from "@/assets/cap-yellow.jpg.asset.json";
+import capRed from "@/assets/cap-red.jpg.asset.json";
+import balaclavaBlack from "@/assets/balaclava-black.jpg.asset.json";
+import balaclavaGreenCamo from "@/assets/balaclava-green-camo.jpg.asset.json";
+import balaclavaPinkCamo from "@/assets/balaclava-pink-camo.jpg.asset.json";
+import balaclavaBlueCamo from "@/assets/balaclava-blue-camo.jpg.asset.json";
 
 export type Product = {
   id: string;
@@ -58,6 +68,16 @@ export const PRODUCTS: Product[] = [
   { id: "backpack-small", name: "Lekompo Backpack — Small", price: 350, category: "streetwear", description: "Lekompo Lageshu school backpack (small). Premium quality, designed for comfort and everyday style. Available in multiple colours.", image: backpacks.url, isNew: true, featured: true },
   { id: "backpack-large", name: "Lekompo Backpack — Large", price: 450, category: "streetwear", description: "Lekompo Lageshu school backpack (large). Premium quality, designed for comfort, strength and everyday style. Available in multiple colours.", image: backpacks.url, isNew: true },
   { id: "gloves", name: "Lekompo Reflector Gloves", price: 150, category: "streetwear", description: "Lekompo Lageshu reflector gloves with the signature logo print. Available in 9 colours: purple, blue, white, pink, yellow, red, beige, green and black.", image: gloves.url, isNew: true, featured: true },
+  { id: "cap-black", name: "Lekompo Panel Cap — Black", price: 200, category: "streetwear", description: "Lekompo La Matla 5-panel cap in black with the signature glow logo on the front.", image: capBlack.url, isNew: true, featured: true, pairGroup: "caps-1", pairIndex: 0 },
+  { id: "cap-lightblue", name: "Lekompo Panel Cap — Light Blue", price: 200, category: "streetwear", description: "Lekompo La Matla 5-panel cap in soft light blue with the signature glow logo on the front.", image: capLightblue.url, isNew: true, pairGroup: "caps-1", pairIndex: 1 },
+  { id: "cap-blue", name: "Lekompo Panel Cap — Blue", price: 200, category: "streetwear", description: "Lekompo La Matla 5-panel cap in electric blue with the signature glow logo on the front.", image: capBlue.url, isNew: true, pairGroup: "caps-2", pairIndex: 0 },
+  { id: "cap-purple", name: "Lekompo Panel Cap — Purple", price: 200, category: "streetwear", description: "Lekompo La Matla 5-panel cap in purple with the signature glow logo on the front.", image: capPurple.url, isNew: true, pairGroup: "caps-2", pairIndex: 1 },
+  { id: "cap-yellow", name: "Lekompo Panel Cap — Yellow", price: 200, category: "streetwear", description: "Lekompo La Matla 5-panel cap in bright yellow with the signature glow logo on the front.", image: capYellow.url, isNew: true, pairGroup: "caps-3", pairIndex: 0 },
+  { id: "cap-red", name: "Lekompo Panel Cap — Red", price: 200, category: "streetwear", description: "Lekompo La Matla 5-panel cap in red with the signature glow logo on the front.", image: capRed.url, isNew: true, pairGroup: "caps-3", pairIndex: 1 },
+  { id: "balaclava-black", name: "Lekompo Balaclava — Black", price: 200, category: "streetwear", description: "Lekompo La Matla balaclava in solid black with the peace-hand logo and circle emblem.", image: balaclavaBlack.url, isNew: true, featured: true, pairGroup: "balaclava-1", pairIndex: 0 },
+  { id: "balaclava-green-camo", name: "Lekompo Balaclava — Green Camo", price: 200, category: "streetwear", description: "Lekompo La Matla balaclava in green camo with the peace-hand logo and circle emblem.", image: balaclavaGreenCamo.url, isNew: true, pairGroup: "balaclava-1", pairIndex: 1 },
+  { id: "balaclava-pink-camo", name: "Lekompo Balaclava — Pink Camo", price: 200, category: "streetwear", description: "Lekompo La Matla balaclava in pink camo with the peace-hand logo and circle emblem.", image: balaclavaPinkCamo.url, isNew: true, pairGroup: "balaclava-2", pairIndex: 0 },
+  { id: "balaclava-blue-camo", name: "Lekompo Balaclava — Blue Camo", price: 200, category: "streetwear", description: "Lekompo La Matla balaclava in blue camo with the peace-hand logo and circle emblem.", image: balaclavaBlueCamo.url, isNew: true, pairGroup: "balaclava-2", pairIndex: 1 },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);
