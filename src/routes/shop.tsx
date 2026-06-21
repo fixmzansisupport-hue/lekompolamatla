@@ -17,7 +17,7 @@ export const Route = createFileRoute("/shop")({
 });
 
 function Shop() {
-  const [cat, setCat] = useState<"all" | "hoodies" | "tracksuits" | "reflective" | "tees" | "umbrella" | "beanies" | "caps" | "balaclavas" | "raincoats" | "tights" | "backpacks" | "gloves">("all");
+  const [cat, setCat] = useState<"all" | "hoodies" | "tracksuits" | "reflective" | "tees" | "umbrella" | "beanies" | "caps" | "balaclavas" | "visors" | "raincoats" | "tights" | "backpacks" | "gloves">("all");
   const groups: Record<typeof cat, (id: string) => boolean> = {
     all: () => true,
     hoodies: (id) => id.startsWith("hoodie-"),
@@ -28,6 +28,7 @@ function Shop() {
     beanies: (id) => id.startsWith("beanie-"),
     caps: (id) => id.startsWith("cap-"),
     balaclavas: (id) => id.startsWith("balaclava-"),
+    visors: (id) => id.startsWith("visor-"),
     raincoats: (id) => id.startsWith("raincoat-"),
     tights: (id) => id.startsWith("ladies-tights"),
     backpacks: (id) => id.startsWith("backpack-"),
@@ -52,6 +53,7 @@ function Shop() {
           ["beanies", "Beanies"],
           ["caps", "Panel Caps"],
           ["balaclavas", "Balaclavas"],
+          ["visors", "Transparent Caps"],
           ["raincoats", "Rain Coats"],
           ["tights", "Ladies Tights"],
           ["backpacks", "Backpacks"],
