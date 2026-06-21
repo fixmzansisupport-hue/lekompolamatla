@@ -29,6 +29,11 @@ import balaclavaBlack from "@/assets/balaclava-black.jpg.asset.json";
 import balaclavaGreenCamo from "@/assets/balaclava-green-camo.jpg.asset.json";
 import balaclavaPinkCamo from "@/assets/balaclava-pink-camo.jpg.asset.json";
 import balaclavaBlueCamo from "@/assets/balaclava-blue-camo.jpg.asset.json";
+import visorPurple from "@/assets/visor-purple.jpg.asset.json";
+import visorRed from "@/assets/visor-red.jpg.asset.json";
+import visorBlue from "@/assets/visor-blue.jpg.asset.json";
+import visorGreen from "@/assets/visor-green.jpg.asset.json";
+import visorPink from "@/assets/visor-pink.jpg.asset.json";
 
 export type Product = {
   id: string;
@@ -78,6 +83,11 @@ export const PRODUCTS: Product[] = [
   { id: "balaclava-green-camo", name: "Lekompo Balaclava — Green Camo", price: 200, category: "streetwear", description: "Lekompo La Matla balaclava in green camo with the peace-hand logo and circle emblem.", image: balaclavaGreenCamo.url, isNew: true, pairGroup: "balaclava-1", pairIndex: 1 },
   { id: "balaclava-pink-camo", name: "Lekompo Balaclava — Pink Camo", price: 200, category: "streetwear", description: "Lekompo La Matla balaclava in pink camo with the peace-hand logo and circle emblem.", image: balaclavaPinkCamo.url, isNew: true, pairGroup: "balaclava-2", pairIndex: 0 },
   { id: "balaclava-blue-camo", name: "Lekompo Balaclava — Blue Camo", price: 200, category: "streetwear", description: "Lekompo La Matla balaclava in blue camo with the peace-hand logo and circle emblem.", image: balaclavaBlueCamo.url, isNew: true, pairGroup: "balaclava-2", pairIndex: 1 },
+  { id: "visor-purple", name: "Lekompo Transparent Half Cap — Purple", price: 250, category: "streetwear", description: "Lekompo La Matla transparent half cap visor in deep purple with the signature glow logo. Adjustable strap.", image: visorPurple.url, isNew: true, featured: true },
+  { id: "visor-red", name: "Lekompo Transparent Half Cap — Red", price: 250, category: "streetwear", description: "Lekompo La Matla transparent half cap visor in red with the signature glow logo. Adjustable strap.", image: visorRed.url, isNew: true },
+  { id: "visor-blue", name: "Lekompo Transparent Half Cap — Blue", price: 250, category: "streetwear", description: "Lekompo La Matla transparent half cap visor in electric blue with the signature glow logo. Adjustable strap.", image: visorBlue.url, isNew: true },
+  { id: "visor-green", name: "Lekompo Transparent Half Cap — Green", price: 250, category: "streetwear", description: "Lekompo La Matla transparent half cap visor in neon green with the signature glow logo. Adjustable strap.", image: visorGreen.url, isNew: true },
+  { id: "visor-pink", name: "Lekompo Transparent Half Cap — Pink", price: 250, category: "streetwear", description: "Lekompo La Matla transparent half cap visor in pink with the signature glow logo. Adjustable strap.", image: visorPink.url, isNew: true },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);
