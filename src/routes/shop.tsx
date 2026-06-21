@@ -53,6 +53,7 @@ function Shop() {
           ["beanies", "Beanies"],
           ["caps", "Panel Caps"],
           ["balaclavas", "Balaclavas"],
+          ["visors", "Transparent Caps"],
           ["raincoats", "Rain Coats"],
           ["tights", "Ladies Tights"],
           ["backpacks", "Backpacks"],
