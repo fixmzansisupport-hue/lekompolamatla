@@ -34,6 +34,10 @@ import visorRed from "@/assets/visor-red.jpg.asset.json";
 import visorBlue from "@/assets/visor-blue.jpg.asset.json";
 import visorGreen from "@/assets/visor-green.jpg.asset.json";
 import visorPink from "@/assets/visor-pink.jpg.asset.json";
+import trackpantsWhite from "@/assets/trackpants-white.jpg.asset.json";
+import trackpantsBlue from "@/assets/trackpants-blue.jpg.asset.json";
+import trackpantsPink from "@/assets/trackpants-pink.jpg.asset.json";
+import trackpantsYellow from "@/assets/trackpants-yellow.jpg.asset.json";
 
 export type Product = {
   id: string;
@@ -88,6 +92,10 @@ export const PRODUCTS: Product[] = [
   { id: "visor-blue", name: "Lekompo Transparent Half Cap — Blue", price: 250, category: "streetwear", description: "Lekompo La Matla transparent half cap visor in electric blue with the signature glow logo. Adjustable strap.", image: visorBlue.url, isNew: true },
   { id: "visor-green", name: "Lekompo Transparent Half Cap — Green", price: 250, category: "streetwear", description: "Lekompo La Matla transparent half cap visor in neon green with the signature glow logo. Adjustable strap.", image: visorGreen.url, isNew: true },
   { id: "visor-pink", name: "Lekompo Transparent Half Cap — Pink", price: 250, category: "streetwear", description: "Lekompo La Matla transparent half cap visor in pink with the signature glow logo. Adjustable strap.", image: visorPink.url, isNew: true },
+  { id: "trackpants-white", name: "Lekompo Track Pants — White", price: 450, category: "streetwear", description: "Lekompo La Matla track pants in white with the signature glow logo and peace-hand artwork on the leg.", image: trackpantsWhite.url, isNew: true, featured: true },
+  { id: "trackpants-blue", name: "Lekompo Track Pants — Blue", price: 450, category: "streetwear", description: "Lekompo La Matla track pants in sky blue with the signature glow logo and peace-hand artwork on the leg.", image: trackpantsBlue.url, isNew: true },
+  { id: "trackpants-pink", name: "Lekompo Track Pants — Pink", price: 450, category: "streetwear", description: "Lekompo La Matla track pants in pink with the signature glow logo and peace-hand artwork on the leg.", image: trackpantsPink.url, isNew: true },
+  { id: "trackpants-yellow", name: "Lekompo Track Pants — Yellow", price: 450, category: "streetwear", description: "Lekompo La Matla track pants in yellow with the signature glow logo and peace-hand artwork on the leg.", image: trackpantsYellow.url, isNew: true },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);
