@@ -38,6 +38,12 @@ import trackpantsWhite from "@/assets/trackpants-white.jpg.asset.json";
 import trackpantsBlue from "@/assets/trackpants-blue.jpg.asset.json";
 import trackpantsPink from "@/assets/trackpants-pink.jpg.asset.json";
 import trackpantsYellow from "@/assets/trackpants-yellow.jpg.asset.json";
+import drifitGrey from "@/assets/drifit-grey.jpg.asset.json";
+import drifitBlack from "@/assets/drifit-black.jpg.asset.json";
+import drifitBlue from "@/assets/drifit-blue.jpg.asset.json";
+import drifitPurple from "@/assets/drifit-purple.jpg.asset.json";
+import drifitPink from "@/assets/drifit-pink.jpg.asset.json";
+import drifitGreen from "@/assets/drifit-green.jpg.asset.json";
 
 export type Product = {
   id: string;
@@ -96,6 +102,12 @@ export const PRODUCTS: Product[] = [
   { id: "trackpants-blue", name: "Lekompo Track Pants — Blue", price: 450, category: "streetwear", description: "Lekompo La Matla track pants in sky blue with the signature glow logo and peace-hand artwork on the leg.", image: trackpantsBlue.url, isNew: true },
   { id: "trackpants-pink", name: "Lekompo Track Pants — Pink", price: 450, category: "streetwear", description: "Lekompo La Matla track pants in pink with the signature glow logo and peace-hand artwork on the leg.", image: trackpantsPink.url, isNew: true },
   { id: "trackpants-yellow", name: "Lekompo Track Pants — Yellow", price: 450, category: "streetwear", description: "Lekompo La Matla track pants in yellow with the signature glow logo and peace-hand artwork on the leg.", image: trackpantsYellow.url, isNew: true },
+  { id: "drifit-grey", name: "Lekompo T-Shirt — Dri-Fit Grey", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in grey with the reflective LEKOMPO chest print and circle emblem.", image: drifitGrey.url, isNew: true, featured: true },
+  { id: "drifit-black", name: "Lekompo T-Shirt — Dri-Fit Black", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in black with the reflective LEKOMPO chest print and circle emblem.", image: drifitBlack.url, isNew: true },
+  { id: "drifit-blue", name: "Lekompo T-Shirt — Dri-Fit Blue", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in sky blue with the reflective LEKOMPO chest print and circle emblem.", image: drifitBlue.url, isNew: true },
+  { id: "drifit-purple", name: "Lekompo T-Shirt — Dri-Fit Purple", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in purple with the reflective LEKOMPO chest print and circle emblem.", image: drifitPurple.url, isNew: true },
+  { id: "drifit-pink", name: "Lekompo T-Shirt — Dri-Fit Pink", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in pink with the reflective LEKOMPO chest print and circle emblem.", image: drifitPink.url, isNew: true },
+  { id: "drifit-green", name: "Lekompo T-Shirt — Dri-Fit Green", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in neon green with the reflective LEKOMPO chest print and circle emblem.", image: drifitGreen.url, isNew: true },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);
