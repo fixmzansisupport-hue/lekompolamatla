@@ -44,6 +44,8 @@ import drifitBlue from "@/assets/drifit-blue.jpg.asset.json";
 import drifitPurple from "@/assets/drifit-purple.jpg.asset.json";
 import drifitPink from "@/assets/drifit-pink.jpg.asset.json";
 import drifitGreen from "@/assets/drifit-green.jpg.asset.json";
+import drifitTrackpants from "@/assets/drifit-trackpants.jpg.asset.json";
+import drifitShorts from "@/assets/drifit-shorts.jpg.asset.json";
 
 export type Product = {
   id: string;
@@ -108,6 +110,8 @@ export const PRODUCTS: Product[] = [
   { id: "drifit-purple", name: "Lekompo T-Shirt — Dri-Fit Purple", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in purple with the reflective LEKOMPO chest print and circle emblem.", image: drifitPurple.url, isNew: true },
   { id: "drifit-pink", name: "Lekompo T-Shirt — Dri-Fit Pink", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in pink with the reflective LEKOMPO chest print and circle emblem.", image: drifitPink.url, isNew: true },
   { id: "drifit-green", name: "Lekompo T-Shirt — Dri-Fit Green", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in neon green with the reflective LEKOMPO chest print and circle emblem.", image: drifitGreen.url, isNew: true },
+  { id: "drifit-trackpants", name: "Lekompo Dri-Fit Track Pant — Man Driller", price: 700, category: "streetwear", description: "Lekompo La Matla Dri-Fit track pants with reflective ankle stripe, zip cuffs and the signature circle emblem. Available in black and grey.", image: drifitTrackpants.url, isNew: true, featured: true },
+  { id: "drifit-shorts", name: "Lekompo Dri-Fit Short — Man Driller", price: 500, category: "streetwear", description: "Lekompo La Matla Dri-Fit shorts with the signature circle emblem. Available in navy, grey, black and teal.", image: drifitShorts.url, isNew: true, featured: true },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);
