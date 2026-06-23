@@ -46,6 +46,13 @@ import drifitPink from "@/assets/drifit-pink.jpg.asset.json";
 import drifitGreen from "@/assets/drifit-green.jpg.asset.json";
 import drifitTrackpants from "@/assets/drifit-trackpants.jpg.asset.json";
 import drifitShorts from "@/assets/drifit-shorts.jpg.asset.json";
+import hbBlack from "@/assets/hoodie-beanie-black.jpg.asset.json";
+import hbOrange from "@/assets/hoodie-beanie-orange.jpg.asset.json";
+import hbWhite from "@/assets/hoodie-beanie-white.jpg.asset.json";
+import hbPink from "@/assets/hoodie-beanie-pink.jpg.asset.json";
+import hbGreen from "@/assets/hoodie-beanie-green.jpg.asset.json";
+import hbPeach from "@/assets/hoodie-beanie-peach.jpg.asset.json";
+import hbPurple from "@/assets/hoodie-beanie-purple.jpg.asset.json";
 
 export type Product = {
   id: string;
@@ -112,6 +119,13 @@ export const PRODUCTS: Product[] = [
   { id: "drifit-green", name: "Lekompo T-Shirt — Dri-Fit Green", price: 350, category: "streetwear", description: "Lekompo La Matla Dri-Fit t-shirt in neon green with the reflective LEKOMPO chest print and circle emblem.", image: drifitGreen.url, isNew: true },
   { id: "drifit-trackpants", name: "Lekompo Dri-Fit Track Pant — Man Driller", price: 700, category: "streetwear", description: "Lekompo La Matla Dri-Fit track pants with reflective ankle stripe, zip cuffs and the signature circle emblem. Available in black and grey.", image: drifitTrackpants.url, isNew: true, featured: true },
   { id: "drifit-shorts", name: "Lekompo Dri-Fit Short — Man Driller", price: 500, category: "streetwear", description: "Lekompo La Matla Dri-Fit shorts with the signature circle emblem. Available in navy, grey, black and teal.", image: drifitShorts.url, isNew: true, featured: true },
+  { id: "hoodie-beanie-black", name: "Lekompo Hoodie + Beanie — Black", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in black. R50 off when bought together.", image: hbBlack.url, isNew: true, featured: true },
+  { id: "hoodie-beanie-orange", name: "Lekompo Hoodie + Beanie — Orange", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in orange. R50 off when bought together.", image: hbOrange.url, isNew: true },
+  { id: "hoodie-beanie-white", name: "Lekompo Hoodie + Beanie — White", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in white. R50 off when bought together.", image: hbWhite.url, isNew: true },
+  { id: "hoodie-beanie-pink", name: "Lekompo Hoodie + Beanie — Pink", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in pink. R50 off when bought together.", image: hbPink.url, isNew: true },
+  { id: "hoodie-beanie-green", name: "Lekompo Hoodie + Beanie — Green", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in neon green. R50 off when bought together.", image: hbGreen.url, isNew: true },
+  { id: "hoodie-beanie-peach", name: "Lekompo Hoodie + Beanie — Peach", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in peach. R50 off when bought together.", image: hbPeach.url, isNew: true },
+  { id: "hoodie-beanie-purple", name: "Lekompo Hoodie + Beanie — Purple", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in purple. R50 off when bought together.", image: hbPurple.url, isNew: true },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);
