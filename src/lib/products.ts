@@ -53,6 +53,8 @@ import hbPink from "@/assets/hoodie-beanie-pink.jpg.asset.json";
 import hbGreen from "@/assets/hoodie-beanie-green.jpg.asset.json";
 import hbPeach from "@/assets/hoodie-beanie-peach.jpg.asset.json";
 import hbPurple from "@/assets/hoodie-beanie-purple.jpg.asset.json";
+import neonWaveHatPink from "@/assets/neon-wave-hat-pink.jpg.asset.json";
+import neonWaveHatGreen from "@/assets/neon-wave-hat-green.jpg.asset.json";
 
 export type Product = {
   id: string;
@@ -126,6 +128,8 @@ export const PRODUCTS: Product[] = [
   { id: "hoodie-beanie-green", name: "Lekompo Hoodie + Beanie — Green", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in neon green. R50 off when bought together.", image: hbGreen.url, isNew: true },
   { id: "hoodie-beanie-peach", name: "Lekompo Hoodie + Beanie — Peach", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in peach. R50 off when bought together.", image: hbPeach.url, isNew: true },
   { id: "hoodie-beanie-purple", name: "Lekompo Hoodie + Beanie — Purple", price: 500, category: "streetwear", description: "Lekompo La Matla Man Driller hoodie and matching beanie set in purple. R50 off when bought together.", image: hbPurple.url, isNew: true },
+  { id: "neon-wave-hat-pink", name: "Lekompo Neon Wave Hat — Pink", price: 250, category: "streetwear", description: "Lekompo Neon Wave bucket hat in pink and black neon wave print. Bold, lightweight, and ready for the street.", image: neonWaveHatPink.url, isNew: true, featured: true, pairGroup: "neon-wave-hats", pairIndex: 0 },
+  { id: "neon-wave-hat-green", name: "Lekompo Neon Wave Hat — Green", price: 250, category: "streetwear", description: "Lekompo Neon Wave bucket hat in green and black neon wave print. Bold, lightweight, and ready for the street.", image: neonWaveHatGreen.url, isNew: true, pairGroup: "neon-wave-hats", pairIndex: 1 },
 ];
 
 export const getProduct = (id: string) => PRODUCTS.find((p) => p.id === id);

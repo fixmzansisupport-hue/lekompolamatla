@@ -17,7 +17,7 @@ export const Route = createFileRoute("/shop")({
 });
 
 function Shop() {
-  const [cat, setCat] = useState<"all" | "hoodies" | "tracksuits" | "reflective" | "tees" | "umbrella" | "beanies" | "caps" | "balaclavas" | "visors" | "raincoats" | "tights" | "backpacks" | "gloves">("all");
+  const [cat, setCat] = useState<"all" | "hoodies" | "tracksuits" | "reflective" | "tees" | "umbrella" | "beanies" | "caps" | "balaclavas" | "visors" | "raincoats" | "tights" | "backpacks" | "gloves" | "hats">("all");
   const groups: Record<typeof cat, (id: string) => boolean> = {
     all: () => true,
     hoodies: (id) => id.startsWith("hoodie-"),
@@ -33,6 +33,7 @@ function Shop() {
     tights: (id) => id.startsWith("ladies-tights"),
     backpacks: (id) => id.startsWith("backpack-"),
     gloves: (id) => id === "gloves",
+    hats: (id) => id.startsWith("neon-wave-hat"),
   };
   const items = PRODUCTS.filter((p) => groups[cat](p.id));
   const renderedPairs = new Set<string>();
@@ -58,6 +59,7 @@ function Shop() {
           ["tights", "Ladies Tights"],
           ["backpacks", "Backpacks"],
           ["gloves", "Gloves"],
+          ["hats", "Neon Wave Hats"],
         ] as const).map(([k, label]) => (
           <button
             key={k}
