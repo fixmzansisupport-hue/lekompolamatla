@@ -59,6 +59,7 @@ function Shop() {
           ["tights", "Ladies Tights"],
           ["backpacks", "Backpacks"],
           ["gloves", "Gloves"],
+          ["hats", "Neon Wave Hats"],
         ] as const).map(([k, label]) => (
           <button
             key={k}
