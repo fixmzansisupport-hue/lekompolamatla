@@ -53,6 +53,8 @@ import hbPink from "@/assets/hoodie-beanie-pink.jpg.asset.json";
 import hbGreen from "@/assets/hoodie-beanie-green.jpg.asset.json";
 import hbPeach from "@/assets/hoodie-beanie-peach.jpg.asset.json";
 import hbPurple from "@/assets/hoodie-beanie-purple.jpg.asset.json";
+import neonWaveHatPink from "@/assets/neon-wave-hat-pink.jpg.asset.json";
+import neonWaveHatGreen from "@/assets/neon-wave-hat-green.jpg.asset.json";
 
 export type Product = {
   id: string;
