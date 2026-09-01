@@ -7,6 +7,7 @@ import { useCart } from "@/lib/cart";
 const NAV = [
   { to: "/shop", label: "Shop" },
   { to: "/new", label: "New Arrivals" },
+  { to: "/stores", label: "Stores" },
   { to: "/about", label: "About Man Driller" },
   { to: "/contact", label: "Contact / Bookings" },
 ] as const;
